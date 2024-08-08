@@ -21,8 +21,12 @@ import static net.adoptopenjdk.stf.StfConstants.PERL_PROCESS_DATA;
 import static net.adoptopenjdk.stf.extensions.core.StfCoreExtension.Echo.ECHO_ON;
 
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,6 +42,7 @@ import org.apache.logging.log4j.Logger;
 
 import net.adoptopenjdk.stf.StfConstants;
 import net.adoptopenjdk.stf.StfException;
+import net.adoptopenjdk.stf.codeGeneration.PerlCodeGenerator.CommandDetails;
 import net.adoptopenjdk.stf.environment.DirectoryRef;
 import net.adoptopenjdk.stf.environment.FileRef;
 import net.adoptopenjdk.stf.environment.JavaVersion;
@@ -134,7 +139,7 @@ public class PerlCodeGenerator {
 		if (stage != Stage.INITIALISATION) {
 			boolean isExistingPerlFile = outputFile.asJavaFile().exists();
 			try {
-				FileWriter fw = new FileWriter(outputFile.asJavaFile(), true);
+				Writer fw = new OutputStreamWriter(new FileOutputStream(outputFile.asJavaFile(), true), Charset.forName("IBM-1047"));
 				perlFile = new BufferedWriter(fw);
 			} catch (IOException e) {
 				throw new StfException("Failed to create perl file: " + outputFile, e);
