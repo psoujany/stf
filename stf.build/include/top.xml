@@ -359,7 +359,7 @@ limitations under the License.
 			<equals arg1="${os.name}" arg2="z/OS"/>
 	</condition>
 
-	<condition property="src-encoding" value="IBM-1047" else="UTF-8">
+	<condition property="src-encoding" value="UTF-8" else="UTF-8">
 		<isset property="isZOS"/>
 	</condition>
 
