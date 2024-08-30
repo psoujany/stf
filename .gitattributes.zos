@@ -13,6 +13,7 @@
 * git-encoding=iso8859-1 working-tree-encoding=ibm-1047
 
 # Specific types of files remain as ASCII
+*.java git-encoding=iso8859-1 working-tree-encoding=iso8859-1
 *.xml git-encoding=iso8859-1 working-tree-encoding=iso8859-1
 *.dtd git-encoding=iso8859-1 working-tree-encoding=iso8859-1
 *.xsd git-encoding=iso8859-1 working-tree-encoding=iso8859-1

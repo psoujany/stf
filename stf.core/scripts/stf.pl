@@ -431,6 +431,7 @@ my ($now, $date, $time) = stf::stfUtility->getNow(date => $TRUE, time => $TRUE);
     my $cmd = "$javahome_generation/bin/java " .
               "$java_debug_settings" .
               " -Dlog4j.skipJansi=true" .  # Suppress warning on Windows
+              " -Dfile.encoding=IBM-1047" .
               " -Djava.system.class.loader=net.adoptopenjdk.stf.runner.StfClassLoader" .
               " -classpath $log4j_api_dir" . $sep . "$log4j_core_dir" . $sep . "$Bin/../bin" .
               " net.adoptopenjdk.stf.runner.StfRunner" .
