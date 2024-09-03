@@ -1,3 +1,5 @@
+*.pl git-encoding=iso8859-1 working-tree-encoding=iso8859-1
+
 # Default - treat files as text as convert line ending to LF
 * text eol=lf
 
