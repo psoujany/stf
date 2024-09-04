@@ -10,7 +10,7 @@
 # See the License for the specific language governing permissions and
 
 # The default for text files
-* git-encoding=iso8859-1 working-tree-encoding=iso8859-1
+*.pl git-encoding=iso8859-1 working-tree-encoding=ibm-1047
 
 # Specific types of files remain as ASCII
 *.java git-encoding=iso8859-1 working-tree-encoding=iso8859-1
