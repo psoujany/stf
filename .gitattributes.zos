@@ -12,6 +12,7 @@
 # The default for text files
 *.pl git-encoding=iso8859-1 working-tree-encoding=ibm-1047
 *.pm git-encoding=iso8859-1 working-tree-encoding=ibm-1047
+stf.core/scripts/stf/Constants.pm git-encoding=iso8859-1 working-tree-encoding=ibm-1047
 
 # Specific types of files remain as ASCII
 *.java git-encoding=iso8859-1 working-tree-encoding=iso8859-1
